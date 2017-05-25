@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.2
--- http://www.phpmyadmin.net
+-- version 4.6.5.2
+-- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 16, 2017 at 05:24 PM
--- Server version: 10.1.19-MariaDB
--- PHP Version: 7.0.9
+-- Generation Time: May 26, 2017 at 01:49 
+-- Server version: 10.1.21-MariaDB
+-- PHP Version: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -83,7 +83,8 @@ CREATE TABLE `monitor` (
 INSERT INTO `monitor` (`id_monitor`, `nama_supir`, `nopol_armada`, `jenis_bak`, `volume`, `id_supplier`, `id_user`, `waktu_input`) VALUES
 (1, 'paijo', 'L 4234 LK', '1', 29, 47, 1, '2017-04-15'),
 (3, 'Pai2', 'N 1234 LA', 'B', 90, 47, 2, '2017-04-15'),
-(4, 'hilmi', 'N 1234 LA', 'C', 40, 47, 2, '2017-04-15');
+(4, 'hilmi', 'N 1234 LA', 'C', 40, 47, 2, '2017-04-15'),
+(5, '7', '7', '7', 7, 47, 1, '2001-05-26');
 
 -- --------------------------------------------------------
 
@@ -104,7 +105,9 @@ CREATE TABLE `supplier` (
 --
 
 INSERT INTO `supplier` (`id_supplier`, `nama_pemilik`, `alamat`, `no_telp_supplier`, `tanggal_gabung`) VALUES
-(47, 'achmad', 'asdasd', 'asdasd', '2017-12-12');
+(47, 'achmad', 'asdasd', 'asdasd', '2017-12-12'),
+(48, '7', '7', '7', '2017-05-26'),
+(49, 'fauzi', 'fauzi', '0877555', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -128,8 +131,9 @@ CREATE TABLE `usr_ambar` (
 --
 
 INSERT INTO `usr_ambar` (`id_user`, `nama_user`, `tanggal_gabung`, `alamat`, `no_telp`, `username`, `password`, `id_level`) VALUES
-(1, 'Achmad Fathulla', '2017-04-02', 'malang', '123', 'pakjarot', '12345678', '1'),
-(2, 'ahmad', '2017-04-15', 'malang', '0987123123', 'ahmad', 'ahmad', '2');
+(1, 'Achmad Fathulla', '2017-04-02', 'malang', '123', '1', '1', '1'),
+(2, 'ahmad', '2017-04-15', 'malang', '0987123123', '2', '2', '2'),
+(3, 'muslim', '2017-05-26', 'muslim', 'muslim', 'muslim', 'muslim', '2');
 
 --
 -- Indexes for dumped tables
@@ -182,17 +186,17 @@ ALTER TABLE `harga`
 -- AUTO_INCREMENT for table `monitor`
 --
 ALTER TABLE `monitor`
-  MODIFY `id_monitor` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_monitor` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `supplier`
 --
 ALTER TABLE `supplier`
-  MODIFY `id_supplier` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id_supplier` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 --
 -- AUTO_INCREMENT for table `usr_ambar`
 --
 ALTER TABLE `usr_ambar`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- Constraints for dumped tables
 --
